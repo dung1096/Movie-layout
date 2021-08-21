@@ -1,0 +1,67 @@
+.navbar-nav {
+  border-bottom: 1px solid bc("bdLight");
+}
+
+.nav-item {
+  position: relative;
+  padding : 1rem;
+
+  a:nth-child(2) {
+    @include positionAbsolute(auto, auto, -3.5rem, 0);
+    white-space     : nowrap;
+    background-image: bg("linear");
+    width           : 15rem;
+    opacity         : 0;
+    transform       : scale(1.2);
+    transition      : all 0.4s;
+    visibility      : hidden;
+  }
+
+  &::after {
+    content: "";
+    @include positionAbsolute(auto, auto, -1px, 0);
+    @include size(0, 2px);
+    background-image: bg("linear");
+    transition      : all 0.4s;
+  }
+
+  &:hover a:nth-child(2) {
+    visibility: inherit;
+    transform : scale(1);
+    opacity   : 1;
+  }
+
+  &:hover,
+  &.active {
+    &::after {
+      width: 100%;
+    }
+  }
+
+
+}
+
+.nav-link {
+  @include text(fs("subtitle"), tc("textWhite") !important, fw("fwRegular"), 0.2);
+  text-transform: uppercase;
+}
+
+.carousel-caption {
+  @include positionAbsolute(50%, auto, auto, 10%);
+  transform: translate(0, -50%);
+}
+
+.carousel-indicators {
+  @include positionAbsolute(auto, auto, 20%, -5%);
+
+  button {
+    @include size(1rem !important, 1rem !important);
+    border-radius   : 50%;
+    background-color: transparent !important;
+    border          : 2px solid bc("bdWhite") !important;
+
+    &.active {
+      background-color: bc("bdWhite") !important;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+// CREATE THEME
+// colors background
+$bgColor: ("primary": #ffffff,
+  "secondary": #ec7532,
+  "lightOrange": #fbbd61,
+  "linear":linear-gradient(to right, #fbbd61, #ec7532),
+  "linearOverlay":linear-gradient(to top, #000000, transparent),
+);
+
+// colors text
+$textColor: ("textPrimary": #ffffff,
+  "textSecondary": #ec7532,
+  "textWhite":#ffffff,
+);
+// colors border
+$borderColor: ("bdLight": rgba(255, 255, 255, 0.3),
+  "bdWhite": #ffffff,
+);
+// font size
+$fontSize: ("body2": 1.3rem,
+  "body": 1.5rem,
+  "subtitle": 1.6rem,
+  // "h6": 1.6rem,
+  // "h5": 1.8rem,
+  // "h4": 2.5rem,
+  // "h3": 3rem,
+  // "h2": 4rem,
+  "h1": 5rem,
+);
+
+//fonts weight
+$fontWeight: ("fwBold": 700,
+  "fwMedium": 600,
+  "fwRegular": 500,
+  "fwExtraLight": 400,
+  "fwLight": 300,
+);
+
+//spacing
+$spacing: 10px;
+
+//break point
+$breakPoint: ("xl": 1200px,
+  "lg": 992px,
+  "md": 768px,
+  "sm": 576px,
+);

@@ -1,0 +1,51 @@
+//MIXIN
+// font text
+@mixin text($fs, $c, $fw, $pc) {
+  font-size     : $fs;
+  color         : $c;
+  font-weight   : $fw;
+  letter-spacing: spacing($pc);
+}
+
+//button
+@mixin button ($bg, $bd, $br) {
+  background   : $bg;
+  border       : 1px solid $bd;
+  border-radius: $br;
+}
+
+// font icon
+@mixin fontIcon($fs, $c) {
+  font-size: $fs;
+  color    : $c;
+}
+
+// size icon
+@mixin sizeIcon($w, $h, $lh) {
+  width      : $w;
+  height     : $h;
+  line-height: $lh;
+  text-align : center;
+}
+
+//position absolute
+@mixin positionAbsolute($t, $r, $b, $l) {
+  position: absolute;
+  top     : $t;
+  right   : $r;
+  bottom  : $b;
+  left    : $l;
+}
+
+//size
+@mixin size($w, $h) {
+  width : $w;
+  height: $h;
+}
+
+//responsive
+@mixin responsive($breakpoint) {
+  @media screen and(max-width:$breakpoint) {
+    @content;
+  }
+}
