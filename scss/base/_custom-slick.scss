@@ -1,0 +1,44 @@
+.slick-arrow {
+    font-size: 0px;
+
+    &::before {
+        content: "";
+        display: none;
+    }
+
+    &.slick-prev {
+        transform : translate(0, -100%);
+        transition: all 0.4s;
+
+        &::after {
+            content: "<";
+            @include text(3rem, tc("textSecondary"), fw("fwBold"), 0.01);
+        }
+
+        &:hover {
+            transform: translate(0.5rem, -100%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &.slick-next {
+        transform : translate(0, -100%);
+        transition: all 0.4s;
+
+        &::after {
+            content: ">";
+            @include text(3rem, tc("textSecondary"), fw("fwBold"), 0.01);
+        }
+
+        &:hover {
+            transform: translate(-0.5rem, -100%);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

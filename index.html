@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SLICK -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -80,7 +86,8 @@
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
@@ -98,7 +105,8 @@
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
@@ -116,7 +124,8 @@
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
@@ -128,9 +137,158 @@
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rlR4PJn8b8I"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- NAVBAR -->
     <!-- NEW IN -->
+    <section class="new">
+        <div class="container">
+            <h1 class="title new__title">New in</h1>
+            <div class="new__content">
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-1.jpg" alt="movie-1">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-2.jpg" alt="movie-2">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-3.jpg" alt="movie-3">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-4.jpg" alt="movie-4">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-5.jpg" alt="movie-5">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-6.jpg" alt="movie-6">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- SHOW TIMES -->
     <!-- COMING -->
     <!-- CONTACT -->
@@ -142,6 +300,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
+    <!-- JS SLICK -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.new__content').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: true,
+        });
+    </script>
 </body>
 
 </html>

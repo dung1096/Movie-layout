@@ -4,10 +4,11 @@
 
 @import "./base/reset";
 @import "./base/custom-bs";
+@import "./base/custom-slick";
 
 // HEADER
 .header {
-    @include positionAbsolute(0, 0, auto, 0);
+    @include absolute(0, 0, auto, 0);
     background: transparent;
     z-index   : 10;
     width     : 100%;
@@ -80,7 +81,7 @@
             }
 
             .overlay {
-                @include positionAbsolute(0, auto, 0, -200%);
+                @include absolute(0, auto, 0, -200%);
                 @include size(30rem, 100%);
                 background-color: bg("secondary");
                 transform       : skewX(45deg);
@@ -99,7 +100,7 @@
     }
 
     &__overlay {
-        @include positionAbsolute(auto, auto, 0, 0);
+        @include absolute(auto, auto, 0, 0);
         @include size(100%, 100%);
         background-image: bg("linearOverlay");
     }
@@ -107,6 +108,105 @@
 
 // NAVBAR
 // NEW IN
+.new {
+    background-color: bg("primary");
+
+    &__title {
+        @include text(fs("h5"), tc("textSecondary"), fw("fwExtraLight"), 0.1);
+        text-transform: uppercase;
+        position      : relative;
+        margin        : 2rem 0;
+        padding       : 2rem 0;
+        border-bottom : 1px solid bc("bdDark");
+
+        &::after {
+            content: "";
+            @include absolute(auto, auto, -1px, 0);
+            @include size(12rem, 2px);
+            background-image: bg("linear");
+        }
+    }
+
+    &__item {
+        text-align: center;
+        position  : relative;
+        margin    : 0 1rem;
+        overflow  : hidden;
+
+        &__poster {
+            position     : relative;
+            border-radius: 2rem;
+            overflow     : hidden;
+
+            img {
+                width: 100%;
+            }
+
+            &:hover {
+                .new__item__info {
+                    opacity  : 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+
+                .new__item__overlay {
+                    left: -70%
+                }
+            }
+        }
+
+        &__info {
+            @include absolute(50%, auto, auto, 50%);
+            @include flex(center, center, column);
+            transform : translate(-50%, -50%) scale(0.8);
+            z-index   : 10;
+            transition: all 0.5s;
+            opacity   : 0;
+
+            i {
+                @include icon(8rem, 8rem, 8rem, transparent, bc("bdWhite"), fs("h5"), tc("textWhite"));
+                cursor    : pointer;
+                transition: all 0.4s;
+
+                &:hover {
+                    transform: scale(0.8);
+                }
+            }
+
+            a {
+                @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
+                text-transform: uppercase;
+                margin        : 1rem 0;
+            }
+
+            p {
+                @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
+                white-space: nowrap;
+            }
+        }
+
+        &__overlay {
+            @include absolute(0, auto, 0, -400%);
+            @include size(70rem, 100%);
+            background-color: bg("secondary");
+            transform       : skewX(45deg);
+            transition      : all 0.5s;
+        }
+
+        h2 {
+            @include text(fs("h5"), tc("textSecondary"), fw("fwRegular"), 0.1);
+            margin: 1rem 0;
+        }
+
+        i {
+            @include text(fs("body2"), tc("textLight"), fw("fwBold"), 0.1);
+
+            &.icon-turnOn {
+                color: tc("textOrange");
+            }
+        }
+    }
+}
+
 // SHOW TIMES
 // COMING
 // CONTACT

@@ -1,3 +1,8 @@
+.container {
+  padding-top   : 5rem;
+  padding-bottom: 5rem;
+}
+
 .navbar-nav {
   border-bottom: 1px solid bc("bdLight");
 }
@@ -7,7 +12,7 @@
   padding : 1rem;
 
   a:nth-child(2) {
-    @include positionAbsolute(auto, auto, -3.5rem, 0);
+    @include absolute(auto, auto, -3.5rem, 0);
     white-space     : nowrap;
     background-image: bg("linear");
     width           : 15rem;
@@ -19,7 +24,7 @@
 
   &::after {
     content: "";
-    @include positionAbsolute(auto, auto, -1px, 0);
+    @include absolute(auto, auto, -1px, 0);
     @include size(0, 2px);
     background-image: bg("linear");
     transition      : all 0.4s;
@@ -47,12 +52,12 @@
 }
 
 .carousel-caption {
-  @include positionAbsolute(50%, auto, auto, 10%);
+  @include absolute(50%, auto, auto, 10%);
   transform: translate(0, -50%);
 }
 
 .carousel-indicators {
-  @include positionAbsolute(auto, auto, 20%, -5%);
+  @include absolute(auto, auto, 20%, -5%);
 
   button {
     @include size(1rem !important, 1rem !important);
