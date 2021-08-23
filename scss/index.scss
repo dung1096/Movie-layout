@@ -208,6 +208,86 @@
 }
 
 // SHOW TIMES
+.showtime {
+    background: bg("primary");
+
+    &__poster img {
+        border-radius: 10%;
+    }
+
+    &__info {
+
+        h2 {
+            @include text(fs("body"), tc("textSecondary"), fw("fwExtraLight"), 0.2);
+            text-transform: uppercase;
+
+            a {
+                @include text(fs("body"), tc("textSecondary"), fw("fwExtraLight"), 0.2);
+
+                &:after {
+                    content: ">";
+                }
+            }
+        }
+
+        h1 {
+            @include text(fs("h4"), tc("textDark"), fw("fwLight"), 0.1);
+        }
+
+        p {
+            @include text(fs("body"), tc("textPrimary"), fw("fwRegular"), 0.1);
+        }
+    }
+
+    &__left {
+        span {
+            @include text(fs("body2"), tc("textDark"), fw("fwRegular"), 0.1);
+            text-transform: uppercase;
+        }
+
+        button {
+            @include button(bg("light"), transparent, 0.25rem);
+            @include text(fs("body2"), tc("textPrimary"), fw("fwLight"), 0.1);
+            margin: 0 0.3rem;
+
+            &.disabled {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    &__right {
+        @include text(fs("body2"), tc("textDark"), fw("fwRegular"), 0.05);
+
+        span {
+            border-radius: 50%;
+            background   : bg("dark");
+            padding      : 0.5rem;
+        }
+    }
+}
+
 // COMING
+.coming {
+
+    &__item {
+        @include size(100%, 60rem);
+        background-size: cover;
+
+        &--1 {
+            background: url(../img/slide-1.png) 100% 100% no-repeat;
+        }
+
+        &--2 {
+            background: url(../img/slide-2.png) 100% 100% no-repeat;
+        }
+
+        &--3 {
+            background: url(../img/slide-3.png) 100% 100% no-repeat;
+        }
+    }
+
+}
+
 // CONTACT
 // FOOTER

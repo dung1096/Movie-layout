@@ -84,12 +84,22 @@ a {
   width: 100%;
 }
 
+.nav-item--config.active .nav-link--config {
+  color: #ec7532 !important;
+}
+
 .nav-link {
   font-size: 1.6rem;
   color: #ffffff !important;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.nav-link--config {
+  color: #4a4a4a !important;
+  border: none !important;
+  cursor: pointer;
 }
 
 .carousel-caption {
@@ -467,5 +477,100 @@ a {
 
 .new__item i.icon-turnOn {
   color: #fbbd61;
+}
+
+.showtime {
+  background: #ffffff;
+}
+
+.showtime__poster img {
+  border-radius: 10%;
+}
+
+.showtime__info h2 {
+  font-size: 1.5rem;
+  color: #ec7532;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.showtime__info h2 a {
+  font-size: 1.5rem;
+  color: #ec7532;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.showtime__info h2 a:after {
+  content: ">";
+}
+
+.showtime__info h1 {
+  font-size: 2.5rem;
+  color: #4a4a4a;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.showtime__info p {
+  font-size: 1.5rem;
+  color: #717171;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.showtime__left span {
+  font-size: 1.3rem;
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.showtime__left button {
+  background: #d8d8d8;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  font-size: 1.3rem;
+  color: #717171;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin: 0 0.3rem;
+}
+
+.showtime__left button.disabled {
+  opacity: 0.8;
+}
+
+.showtime__right {
+  font-size: 1.3rem;
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.showtime__right span {
+  border-radius: 50%;
+  background: #343a40;
+  padding: 0.5rem;
+}
+
+.coming__item {
+  width: 100%;
+  height: 60rem;
+  background-size: cover;
+}
+
+.coming__item--1 {
+  background: url(../img/slide-1.png) 100% 100% no-repeat;
+}
+
+.coming__item--2 {
+  background: url(../img/slide-2.png) 100% 100% no-repeat;
+}
+
+.coming__item--3 {
+  background: url(../img/slide-3.png) 100% 100% no-repeat;
 }
 /*# sourceMappingURL=index.css.map */

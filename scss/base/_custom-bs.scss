@@ -43,12 +43,21 @@
     }
   }
 
+  &--config.active .nav-link--config {
+    color: tc("textSecondary") !important;
 
+  }
 }
 
 .nav-link {
   @include text(fs("subtitle"), tc("textWhite") !important, fw("fwRegular"), 0.2);
   text-transform: uppercase;
+
+  &--config {
+    color : tc("textDark") !important;
+    border: none !important;
+    cursor: pointer;
+  }
 }
 
 .carousel-caption {

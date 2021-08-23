@@ -290,7 +290,187 @@
         </div>
     </section>
     <!-- SHOW TIMES -->
+    <section class="showtime">
+        <div class="container">
+            <nav class="nav nav-tabs showtime__nav" id="nav-tab" role="tablist">
+                <div class="nav-item nav-item--config active" id="nav-mon-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-mon" role="tab" aria-controls="nav-mon" aria-selected="true">
+                    <a class="nav-link nav-link--config ">Mon</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-tue-tab" data-bs-toggle="tab" data-bs-target="#nav-tue"
+                    role="tab" aria-controls="nav-tue" aria-selected="false">
+                    <a class="nav-link nav-link--config">Tue</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-wed-tab" data-bs-toggle="tab" data-bs-target="#nav-wed"
+                    role="tab" aria-controls="nav-wed" aria-selected="false">
+                    <a class="nav-link nav-link--config">Wed</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-thu-tab" data-bs-toggle="tab" data-bs-target="#nav-thu"
+                    role="tab" aria-controls="nav-thu" aria-selected="false">
+                    <a class="nav-link nav-link--config">Thu</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-fri-tab" data-bs-toggle="tab" data-bs-target="#nav-fri"
+                    role="tab" aria-controls="nav-fri" aria-selected="false">
+                    <a class="nav-link nav-link--config">Fri</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-sat-tab" data-bs-toggle="tab" data-bs-target="#nav-sat"
+                    role="tab" aria-controls="nav-sat" aria-selected="false">
+                    <a class="nav-link nav-link--config">Sat</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-sun-tab" data-bs-toggle="tab" data-bs-target="#nav-sun"
+                    role="tab" aria-controls="nav-sun" aria-selected="false">
+                    <a class="nav-link nav-link--config">Sun</a>
+                </div>
+            </nav>
+            <div class="tab-content showtime__content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-mon" role="tabpanel" aria-labelledby="nav-mon-tab">
+                    <div class="row my-5">
+                        <div class="col-2 showtime__poster">
+                            <img class="img-fluid" src="./img/movie-7.jpg" alt="movie-7">
+                        </div>
+                        <div class="col-10 showtime__info">
+                            <h2>Action, adventure, fantasy</h2>
+                            <h1>It's over</h1>
+                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum obcaecati id
+                                ullam quaerat
+                                ab natus debitis voluptates alias beatae ipsa!</p>
+                            <h2 class="my-5"><a href="#">Full synopsis</a></h2>
+                            <div class="d-flex justify-content-between">
+                                <div class="showtime__left">
+                                    <i class="fa fa-clock"></i>
+                                    <span class="mx-2">Viewing times</span>
+                                    <button class="disabled" disabled>12:00</button>
+                                    <button>14:00</button>
+                                    <button>16:00</button>
+                                    <button>19:00</button>
+                                </div>
+                                <div class="showtime__right">
+                                    <p>120 mins
+                                        <span>PG</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row my-5">
+                        <div class="col-2 showtime__poster">
+                            <img class="img-fluid" src="./img/movie-8.jpg" alt="movie-8">
+                        </div>
+                        <div class="col-10 showtime__info">
+                            <h2>Drama</h2>
+                            <h1>Fences</h1>
+                            <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum obcaecati id
+                                ullam quaerat
+                                ab natus debitis voluptates alias beatae ipsa!</p>
+                            <h2 class="my-5"><a href="#">Full synopsis</a></h2>
+                            <div class="d-flex justify-content-between">
+                                <div class="showtime__left">
+                                    <i class="fa fa-clock"></i>
+                                    <span class="mx-2">Viewing times</span>
+                                    <button class="disabled" disabled>12:00</button>
+                                    <button>14:15</button>
+                                    <button>17:30</button>
+                                    <button>22:00</button>
+                                </div>
+                                <div class="showtime__right">
+                                    <p>110 mins
+                                        <span>PG</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-tue" role="tabpanel" aria-labelledby="nav-tue-tab">
+                </div>
+                <div class="tab-pane fade" id="nav-wed" role="tabpanel" aria-labelledby="nav-wed-tab"></div>
+                <div class="tab-pane fade" id="nav-thu" role="tabpanel" aria-labelledby="nav-thu-tab"></div>
+                <div class="tab-pane fade" id="nav-fri" role="tabpanel" aria-labelledby="nav-fri-tab"></div>
+                <div class="tab-pane fade" id="nav-sat" role="tabpanel" aria-labelledby="nav-sat-tab"></div>
+                <div class="tab-pane fade" id="nav-sun" role="tabpanel" aria-labelledby="nav-sun-tab"></div>
+            </div>
+        </div>
+    </section>
     <!-- COMING -->
+    <section class="coming">
+        <div class="container">
+            <h1 class="title coming__title">Coming soon</h1>
+        </div>
+        <div id="coming" class="carousel slide">
+            <!-- data-bs-ride="carousel" -->
+            <div class="carousel-indicators justify-content-start">
+                <button type="button" data-bs-target="#coming" data-bs-slide-to="0" class="active" aria-current="true"
+                    aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#coming" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#coming" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item row coming__item coming__item--1 active">
+                    <div class="col-6 carousel-caption coming__detail d-none d-md-block text-start">
+                        <h2>Drama, Thriller</h2>
+                        <h1>Deepwater Horizon</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+                            Mirum
+                            est notare quam littera
+                            gothica, quam nunc putamus parum.</p>
+                        <h2 class="my-5"><a href="#">Full synopsis</a></h2>
+                        <!-- Button trigger modal -->
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="btn-play__txt">
+                                <i class="fa fa-play"></i>
+                                Play trailer
+                            </div>
+                            <div class="overlay"></div>
+                        </button>
+                    </div>
+                    <div class="coming__overlay"></div>
+                </div>
+                <div class="carousel-item coming__item coming__item--2">
+                    <div class="carousel-caption coming__detail d-none d-md-block text-start">
+                        <h2>Action, adventure, fantasy</h2>
+                        <h1>End of the world: Part II</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+                            Mirum
+                            est notare quam littera
+                            gothica, quam nunc putamus parum.</p>
+                        <span class="text-center">PG</span>
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="btn-play__txt">
+                                <i class="fa fa-play"></i>
+                                Play trailer
+                            </div>
+                            <div class="overlay"></div>
+                        </button>
+                    </div>
+                    <div class="coming__overlay"></div>
+                </div>
+                <div class="carousel-item coming__item coming__item--3">
+                    <div class="carousel-caption coming__detail d-none d-md-block text-start">
+                        <h2>Action, adventure, fantasy</h2>
+                        <h1>End of the world: Part III</h1>
+                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum.
+                            Mirum
+                            est notare quam littera
+                            gothica, quam nunc putamus parum.</p>
+                        <span class="text-center">PG</span>
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <div class="btn-play__txt">
+                                <i class="fa fa-play"></i>
+                                Play trailer
+                            </div>
+                            <div class="overlay"></div>
+                        </button>
+                    </div>
+                    <div class="coming__overlay"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!-- CONTACT -->
     <!-- FOOTER -->
     <!-- JS BOOTSTRAP -->
