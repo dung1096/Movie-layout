@@ -3,6 +3,10 @@
   padding-bottom: 5rem;
 }
 
+.row {
+  margin: 0;
+}
+
 .navbar-nav {
   border-bottom: 1px solid bc("bdLight");
 }
@@ -76,6 +80,22 @@
 
     &.active {
       background-color: bc("bdWhite") !important;
+    }
+  }
+}
+
+.modal-content {
+  border    : transparent;
+  background: transparent;
+}
+
+.modal-header {
+  border: transparent;
+
+  .btn-close {
+    &:focus {
+      outline   : none;
+      box-shadow: 0 0 0 0 transparent;
     }
   }
 }
