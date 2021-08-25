@@ -6,6 +6,24 @@ html {
   font-size: 10px;
 }
 
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 7px;
+  }
+}
+
 body {
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -41,8 +59,51 @@ a {
   margin: 0;
 }
 
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler i {
+  width: 5rem;
+  height: 5rem;
+  line-height: 5rem;
+  background: transparent;
+  border: 1px solid transparent;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  -webkit-box-shadow: 0 0 0 0;
+          box-shadow: 0 0 0 0;
+}
+
+.navbar-collapse--config {
+  background: transparent;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-collapse--config {
+    background: #343a40;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-collapse--config {
+    background: transparent;
+  }
+}
+
 .navbar-nav {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    border-bottom: none;
+  }
 }
 
 .nav-item {
@@ -66,6 +127,17 @@ a {
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
   visibility: hidden;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-item a:nth-child(2) {
+    position: absolute;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    left: auto;
+  }
 }
 
 .nav-item::after {
@@ -104,6 +176,7 @@ a {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-link--config {
@@ -268,15 +341,15 @@ a {
 }
 
 .slider__item--1 {
-  background: url(../img/hero-1.jpg) 100% 100% no-repeat;
+  background: url(../img/hero-1.jpg) center center no-repeat;
 }
 
 .slider__item--2 {
-  background: url(../img/hero-2.jpg) 100% 100% no-repeat;
+  background: url(../img/hero-2.jpg) center center no-repeat;
 }
 
 .slider__item--3 {
-  background: url(../img/hero-3.jpg) 100% 100% no-repeat;
+  background: url(../img/hero-3.jpg) center center no-repeat;
 }
 
 .slider__detail {
@@ -297,6 +370,7 @@ a {
   color: #ffffff;
   font-weight: 300;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .slider__detail p {
@@ -378,6 +452,27 @@ a {
   height: 100%;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#000000), to(transparent));
   background-image: linear-gradient(to top, #000000, transparent);
+}
+
+.menu {
+  position: relative;
+  background-color: #000000;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu--pinned {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: inherit;
 }
 
 .new {
@@ -482,8 +577,8 @@ a {
   top: 0;
   right: auto;
   bottom: 0;
-  left: -400%;
-  width: 70rem;
+  left: -600%;
+  width: 90rem;
   height: 100%;
   background-color: #ec7532;
   -webkit-transform: skewX(45deg);
@@ -505,6 +600,10 @@ a {
   color: #d8d8d8;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.new__item i .icon-turnOn {
+  color: #fbbd61;
 }
 
 .showtime {

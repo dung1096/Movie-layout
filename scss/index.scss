@@ -45,15 +45,15 @@
         background-size: cover;
 
         &--1 {
-            background: url(../img/hero-1.jpg) 100% 100% no-repeat;
+            background: url(../img/hero-1.jpg) center center no-repeat;
         }
 
         &--2 {
-            background: url(../img/hero-2.jpg) 100% 100% no-repeat;
+            background: url(../img/hero-2.jpg) center center no-repeat;
         }
 
         &--3 {
-            background: url(../img/hero-3.jpg) 100% 100% no-repeat;
+            background: url(../img/hero-3.jpg) center center no-repeat;
         }
     }
 
@@ -68,6 +68,7 @@
 
         h1 {
             @include text(fs("h1"), tc("textWhite"), fw("fwLight"), 0.1);
+            white-space: nowrap;
         }
 
         p {
@@ -127,11 +128,30 @@
 }
 
 // NAVBAR
+.menu {
+    position        : relative;
+    background-color: bg("black");
+    transform       : translateY(-100%);
+    transition      : all 0.5s;
+    opacity         : 0;
+    visibility      : hidden;
+
+    &--pinned {
+        position  : sticky;
+        top       : 0;
+        transform : translateY(0);
+        opacity   : 1;
+        visibility: inherit;
+    }
+}
+
 // NEW IN
 .new {
     background-color: bg("primary");
 
     &__item {
+        width     : -webkit-max-content;
+        width     : -moz-max-content;
         width     : max-content;
         text-align: center;
         position  : relative;
@@ -190,8 +210,8 @@
         }
 
         &__overlay {
-            @include absolute(0, auto, 0, -400%);
-            @include size(70rem, 100%);
+            @include absolute(0, auto, 0, -600%);
+            @include size(90rem, 100%);
             background-color: bg("secondary");
             transform       : skewX(45deg);
             transition      : all 0.5s;
@@ -204,6 +224,10 @@
 
         i {
             @include text(fs("body2"), tc("textLight"), fw("fwBold"), 0.1);
+
+            .icon-turnOn {
+                color: tc("textOrange");
+            }
         }
     }
 }
@@ -371,6 +395,8 @@
 
 
         &__item {
+            width     : -webkit-max-content;
+            width     : -moz-max-content;
             width     : max-content;
             text-align: center;
             opacity   : 0.5;

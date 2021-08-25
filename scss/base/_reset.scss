@@ -6,6 +6,17 @@
 html {
   font-size: 10px;
 
+  @include responsive(rp("lg")) {
+    font-size: 9px;
+  }
+
+  @include responsive(rp("md")) {
+    font-size: 8px;
+  }
+
+  @include responsive(rp("sm")) {
+    font-size: 7px;
+  }
 }
 
 body {

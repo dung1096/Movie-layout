@@ -35,6 +35,15 @@
   left    : $l;
 }
 
+//position fixed
+@mixin fixed($t, $r, $b, $l) {
+  position: fixed;
+  top     : $t;
+  right   : $r;
+  bottom  : $b;
+  left    : $l;
+}
+
 //size
 @mixin size($w, $h) {
   width : $w;
