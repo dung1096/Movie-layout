@@ -61,7 +61,7 @@
                                 <a class="nav-link" href="#">News single</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="./contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -94,10 +94,10 @@
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
                 </div>
                 <div class="carousel-item slider__item slider__item--2">
                     <div class="carousel-caption slider__detail d-none d-sm-block text-start">
@@ -114,10 +114,10 @@
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
                 </div>
                 <div class="carousel-item slider__item slider__item--3">
                     <div class="carousel-caption slider__detail d-none d-sm-block text-start">
@@ -134,10 +134,10 @@
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
                 </div>
             </div>
         </div>
@@ -184,7 +184,7 @@
                                 <a class="nav-link" href="#">News single</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="./contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -439,7 +439,7 @@
         <div class="coming__content">
             <div class="coming__item coming__item--1 d-flex align-items-center">
                 <div class="container">
-                    <div class="row coming__detail">
+                    <div class="row coming__detail mt-xl-5">
                         <div class="col-12 col-md-6 ps-0 coming__info text-start">
                             <h2>Drama, Thriller</h2>
                             <h1 class="my-4">Deepwater Horizon</h1>
@@ -473,7 +473,7 @@
             </div>
             <div class="coming__item coming__item--2 d-flex align-items-center">
                 <div class="container">
-                    <div class="row coming__detail">
+                    <div class="row coming__detail mt-xl-5">
                         <div class="col-12 col-md-6 coming__info text-start">
                             <h2>Action, adventure, sci-fi</h2>
                             <h1 class="my-4">X-Men: Days of Future Past</h1>
@@ -506,7 +506,7 @@
             </div>
             <div class="coming__item coming__item--3 d-flex align-items-center">
                 <div class="container">
-                    <div class="row coming__detail">
+                    <div class="row coming__detail mt-xl-5">
                         <div class="col-12 col-md-6 coming__info text-start">
                             <h2>Action, adventure, sci-fi</h2>
                             <h1 class="my-4">Transformers: Age of Extinction</h1>
@@ -539,7 +539,7 @@
             </div>
             <div class="coming__item coming__item--1 d-flex align-items-center">
                 <div class="container">
-                    <div class="row coming__detail">
+                    <div class="row coming__detail mt-xl-5">
                         <div class="col-12 col-md-6 ps-0 coming__info text-start">
                             <h2>Drama, Thriller</h2>
                             <h1 class="my-4">Deepwater Horizon</h1>
@@ -573,7 +573,7 @@
             </div>
             <div class="coming__item coming__item--2 d-flex align-items-center">
                 <div class="container">
-                    <div class="row coming__detail">
+                    <div class="row coming__detail mt-xl-5">
                         <div class="col-12 col-md-6 coming__info text-start">
                             <h2>Action, adventure, sci-fi</h2>
                             <h1 class="my-4">X-Men: Days of Future Past</h1>
@@ -709,6 +709,9 @@
             </div>
         </div>
     </footer>
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
@@ -717,8 +720,6 @@
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
     <!-- JS SLICK -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $('.new__content').slick({
@@ -784,18 +785,7 @@
     <script src="./js/wow.min.js"></script>
     <script>new WOW().init();</script>
     <!-- JS MENU -->
-    <script>
-        var pos = $("#menu").position();
-        $(window).scroll(function () {
-            var posScroll = $(document).scrollTop();
-            if (parseInt(posScroll) > parseInt(pos.top)) {
-                $("#menu").addClass("menu--pinned");
-            } else {
-                $("#menu").removeClass("menu--pinned");
-                $("#menu-navbar").removeClass("show");
-            }
-        });
-    </script>
+    <script type="text/javascript" src="./js/menu.js"></script>
 </body>
 
 </html>

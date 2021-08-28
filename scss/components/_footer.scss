@@ -1,68 +1,38 @@
-/* FOOTER */
+// FOOTER
 .footer {
-  background-color: c("dark");
+  background-color: bg("black");
+
   .container {
-    padding-bottom: 0px;
+    padding-bottom: 0;
+  }
 
-    h1 {
-      @include text(fs("h6"), tc("textSecondary"), fw("fwRegular"), 0.2);
-      text-transform: uppercase;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    a {
-      @include text(fs("body2"), tc("textPrimary"), fw("fwRegular"), 0.1);
-      text-decoration: none;
+  h1 {
+    @include text(fs("subtitle"), tc("textSecondary"), fw("fwRegular"), 0.2);
+    text-transform: uppercase;
+  }
 
-      i {
-        @include fontIcon(fs("body2"), tc("textDarkGrey"));
-        @include sizeIcon(20px, 20px, 20px);
-      }
-      &:hover,
-      &:hover i {
-        @include fontIcon(fs("body2"), tc("textOrange"));
-        transition: all 0.5s;
-      }
+  a {
+    @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
+    transition: all 0.5s;
+
+    &:hover {
+      color: tc("textOrange");
     }
-    .copyright {
-      p {
-        @include text(fs("body2"), tc("textPrimary"), fw("fwRegular"), 0.1);
-        padding-top: 20px;
-        border-top: 1px solid bc("borderLight");
-      }
-      a:hover {
-        @include text(fs("body2"), tc("textSecondary"), fw("fwRegular"), 0.1);
-      }
+  }
+
+  i {
+    @include icon(2rem, 2rem, 2rem, transparent, transparent, fs("body"), tc("textDark"));
+  }
+
+  .copyright {
+    border-top: 1px solid bc("bdLight");
+
+    p {
+      @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
     }
 
-    //reponsive
-    @include reponsive(rp("large")) {
-      h1 {
-        @include text(fs("h6"), tc("textSecondary"), fw("fwRegular"), 0.1);
-      }
-    }
-    @include reponsive(rp("medium")) {
-      a {
-        @include text(fs("body1"), tc("textPrimary"), fw("fwRegular"), 0.1);
-
-        i {
-          @include fontIcon(fs("body1"), tc("textDarkGrey"));
-        }
-        &:hover,
-        &:hover i {
-          @include fontIcon(fs("body1"), tc("textOrange"));
-        }
-      }
-      .copyright {
-        p {
-          @include text(fs("body1"), tc("textPrimary"), fw("fwRegular"), 0.1);
-        }
-        a:hover {
-          @include text(fs("body1"), tc("textSecondary"), fw("fwRegular"), 0.1);
-        }
-      }
+    a:hover {
+      color: tc("textSecondary");
     }
   }
 }

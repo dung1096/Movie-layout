@@ -1,12 +1,12 @@
-/* CONTACT */
+// CONTACT
 .contact {
-  background-color: c("primary");
-  border-top: 1px solid bc("borderDark");
+  background-color: bg("primary");
+
   h2 {
-    @include text(fs("h5"), tc("textTitle"), fw("fwLight"), 0.1);
+    @include text(fs("h6"), tc("textDark"), fw("fwLight"), 0.1);
   }
+
   h1 {
     @include text(fs("h2"), tc("textSecondary"), fw("fwRegular"), 0.1);
-    margin: 15px 0;
   }
 }

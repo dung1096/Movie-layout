@@ -1,9 +1,11 @@
-/* HEADER */
+// HEADER
 .header {
-  @include positionAbsolute(0, auto, auto, 0);
-  z-index: 10;
-  width: 100%;
-  &__detail p {
-    @include text(fs("body1"), tc("textPrimary"), fw("fwMedium"), 0.01);
+  @include absolute(0, 0, auto, 0);
+  background: transparent;
+  z-index   : 10;
+  width     : 100%;
+
+  p {
+    @include text(fs("body2"), tc("textWhite"), fw("fwRegular"), 0.1);
   }
 }

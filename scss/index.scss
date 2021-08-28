@@ -6,36 +6,15 @@
 @import "./base/custom-bs";
 @import "./base/custom-slick";
 
-.title {
-    @include text(fs("h5"), tc("textSecondary"), fw("fwExtraLight"), 0.1);
-    text-transform: uppercase;
-    position      : relative;
-    margin        : 2rem 0;
-    padding       : 2rem 0;
-    border-bottom : 1px solid bc("bdDark");
-
-    &::after {
-        content: "";
-        @include absolute(auto, auto, -1px, 0);
-        @include size(15rem, 2px);
-        background-image: bg("linear");
-    }
-}
+@import "./components/title";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/menu";
+@import "./components/contact";
+@import "./components/overlay";
 
 .icon-turnOn {
     color: tc("textOrange");
-}
-
-// HEADER
-.header {
-    @include absolute(0, 0, auto, 0);
-    background: transparent;
-    z-index   : 10;
-    width     : 100%;
-
-    p {
-        @include text(fs("body2"), tc("textWhite"), fw("fwRegular"), 0.1);
-    }
 }
 
 // SLIDER
@@ -86,8 +65,6 @@
         .btn-play {
             @include size(20rem, 4rem);
             @include button(bg("linear"), transparent, 100px);
-            overflow   : hidden;
-            position   : relative;
             margin-left: 1rem;
 
             &__txt {
@@ -101,47 +78,11 @@
                 }
             }
 
-            .overlay {
-                @include absolute(0, auto, 0, -200%);
-                @include size(30rem, 100%);
-                background-color: bg("secondary");
-                transform       : skewX(45deg);
-                transition      : all 0.5s;
-            }
-
-            &:hover .overlay {
-                left: -50%;
-            }
-
             &:focus {
                 outline   : none;
                 box-shadow: none;
             }
         }
-    }
-
-    &__overlay {
-        @include absolute(auto, auto, 0, 0);
-        @include size(100%, 100%);
-        background-image: bg("linearOverlay");
-    }
-}
-
-// NAVBAR
-.menu {
-    position        : relative;
-    background-color: bg("black");
-    transform       : translateY(-100%);
-    transition      : all 0.5s;
-    opacity         : 0;
-    visibility      : hidden;
-
-    &--pinned {
-        position  : sticky;
-        top       : 0;
-        transform : translateY(0);
-        opacity   : 1;
-        visibility: inherit;
     }
 }
 
@@ -402,6 +343,7 @@
             opacity   : 0.5;
             transition: all 0.5s;
             margin    : 0 1rem;
+            cursor    : pointer;
 
             &:hover {
                 opacity: 1;
@@ -422,58 +364,6 @@
 
         p {
             @include text(fs("body2"), tc("textWhite"), fw("fwRegular"), 0.1);
-        }
-    }
-}
-
-// CONTACT
-.contact {
-    background-color: bg("primary");
-
-    h2 {
-        @include text(fs("h6"), tc("textDark"), fw("fwLight"), 0.1);
-    }
-
-    h1 {
-        @include text(fs("h2"), tc("textSecondary"), fw("fwRegular"), 0.1);
-    }
-}
-
-// FOOTER
-.footer {
-    background-color: bg("black");
-
-    .container {
-        padding-bottom: 0;
-    }
-
-    h1 {
-        @include text(fs("subtitle"), tc("textSecondary"), fw("fwRegular"), 0.2);
-        text-transform: uppercase;
-    }
-
-    a {
-        @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
-        transition: all 0.5s;
-
-        &:hover {
-            color: tc("textOrange");
-        }
-    }
-
-    i {
-        @include icon(2rem, 2rem, 2rem, transparent, transparent, fs("body"), tc("textDark"));
-    }
-
-    .copyright {
-        border-top: 1px solid bc("bdLight");
-
-        p {
-            @include text(fs("body"), tc("textWhite"), fw("fwRegular"), 0.1);
-        }
-
-        a:hover {
-            color: tc("textSecondary");
         }
     }
 }
