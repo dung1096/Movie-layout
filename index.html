@@ -18,13 +18,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SLICK -->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!-- ANIMATION -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <!-- HEADER -->
-    <header class="header pt-5">
+    <header class="header animate__animated animate__fadeIn wow" id="header">
         <div class="container">
             <p class="text-end">
                 <i class="fa fa-phone"></i>
@@ -36,9 +43,9 @@
                     <a class="navbar-brand" href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
                         aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <i class="fa fa-list"></i>
                     </button>
-                    <div class="collapse navbar-collapse justify-content-end" id="navbar">
+                    <div class="collapse navbar-collapse navbar-collapse--config justify-content-end" id="navbar">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
                                 <a class="nav-link" aria-current="page" href="./index.html">Home</a>
@@ -54,7 +61,7 @@
                                 <a class="nav-link" href="#">News single</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <a class="nav-link" href="./contact.html">Contact</a>
                             </li>
                         </ul>
                     </div>
@@ -63,9 +70,9 @@
         </div>
     </header>
     <!-- SLIDER -->
-    <section class="slider">
+    <section class="slider animate__animated animate__fadeIn wow">
         <div id="slider" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators justify-content-start">
+            <div class="carousel-indicators justify-content-start d-none d-md-flex">
                 <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true"
                     aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -73,68 +80,638 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item slider__item slider__item--1 active">
-                    <div class="carousel-caption slider__detail d-none d-md-block text-start">
+                    <div class="carousel-caption slider__detail d-none d-sm-block text-start">
                         <h2>Action, adventure, fantasy</h2>
-                        <h1>End of the world: Part I</h1>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                        <h1 class="my-5 my-md-0">End of the world: Part I</h1>
+                        <p class="d-none d-md-block">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                            consuetudium lectorum. Mirum
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
                 </div>
                 <div class="carousel-item slider__item slider__item--2">
-                    <div class="carousel-caption slider__detail d-none d-md-block text-start">
+                    <div class="carousel-caption slider__detail d-none d-sm-block text-start">
                         <h2>Action, adventure, fantasy</h2>
-                        <h1>End of the world: Part II</h1>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                        <h1 class="my-5 my-md-0">End of the world: Part II</h1>
+                        <p class="d-none d-md-block">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                            consuetudium lectorum. Mirum
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
                 </div>
                 <div class="carousel-item slider__item slider__item--3">
-                    <div class="carousel-caption slider__detail d-none d-md-block text-start">
+                    <div class="carousel-caption slider__detail d-none d-sm-block text-start">
                         <h2>Action, adventure, fantasy</h2>
-                        <h1>End of the world: Part III</h1>
-                        <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum
+                        <h1 class="my-5 my-md-0">End of the world: Part III</h1>
+                        <p class="d-none d-md-block">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                            consuetudium lectorum. Mirum
                             est notare quam littera
                             gothica, quam nunc putamus parum.</p>
                         <span class="text-center">PG</span>
-                        <button class="btn btn-play">
+                        <!-- Button trigger modal -->
+                        <button class="btn btn-play" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <div class="btn-play__txt">
                                 <i class="fa fa-play"></i>
                                 Play trailer
                             </div>
-                            <div class="overlay"></div>
+                            <div class="overlay-button"></div>
                         </button>
                     </div>
-                    <div class="slider__overlay"></div>
+                    <div class="overlay-banner"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <iframe width="100%" height="400" src="https://www.youtube.com/embed/rlR4PJn8b8I"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- NAVBAR -->
+    <section class="header menu" id="menu">
+        <div class="container py-4">
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html"><img src="./img/logo.svg" alt="logo"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-navbar"
+                        aria-controls="menu-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-list"></i>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="menu-navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">What's on</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Short codes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">News</a>
+                                <a class="nav-link" href="#">News single</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
     <!-- NEW IN -->
+    <section class="new animate__animated animate__fadeIn wow">
+        <div class="container pt-0">
+            <h1 class="title new__title">New in</h1>
+            <div class="new__content">
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-1.jpg" alt="movie-1">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-2.jpg" alt="movie-2">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-3.jpg" alt="movie-3">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-4.jpg" alt="movie-4">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-5.jpg" alt="movie-5">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+                <div class="new__item">
+                    <div class="new__item__poster">
+                        <img class="img-fluid" src="./img/movie-6.jpg" alt="movie-6">
+                        <div class="new__item__info">
+                            <!-- Button trigger modal -->
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                            <a href="#">Read more</a>
+                            <p>Release: 7 Mar, 2017</p>
+                        </div>
+                        <div class="new__item__overlay"></div>
+                    </div>
+                    <h2>Dark and lonely</h2>
+                    <p>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star icon-turnOn"></i>
+                        <i class="fa fa-star"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- SHOW TIMES -->
+    <section class="showtime animate__animated animate__fadeIn wow">
+        <div class="container">
+            <nav class="nav nav-tabs showtime__nav" id="nav-tab" role="tablist">
+                <div class="nav-item nav-item--config active" id="nav-mon-tab" data-bs-toggle="tab"
+                    data-bs-target="#nav-mon" role="tab" aria-controls="nav-mon" aria-selected="true">
+                    <a class="nav-link nav-link--config ">Mon</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-tue-tab" data-bs-toggle="tab" data-bs-target="#nav-tue"
+                    role="tab" aria-controls="nav-tue" aria-selected="false">
+                    <a class="nav-link nav-link--config">Tue</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-wed-tab" data-bs-toggle="tab" data-bs-target="#nav-wed"
+                    role="tab" aria-controls="nav-wed" aria-selected="false">
+                    <a class="nav-link nav-link--config">Wed</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-thu-tab" data-bs-toggle="tab" data-bs-target="#nav-thu"
+                    role="tab" aria-controls="nav-thu" aria-selected="false">
+                    <a class="nav-link nav-link--config">Thu</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-fri-tab" data-bs-toggle="tab" data-bs-target="#nav-fri"
+                    role="tab" aria-controls="nav-fri" aria-selected="false">
+                    <a class="nav-link nav-link--config">Fri</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-sat-tab" data-bs-toggle="tab" data-bs-target="#nav-sat"
+                    role="tab" aria-controls="nav-sat" aria-selected="false">
+                    <a class="nav-link nav-link--config">Sat</a>
+                </div>
+                <div class="nav-item nav-item--config" id="nav-sun-tab" data-bs-toggle="tab" data-bs-target="#nav-sun"
+                    role="tab" aria-controls="nav-sun" aria-selected="false">
+                    <a class="nav-link nav-link--config">Sun</a>
+                </div>
+            </nav>
+            <div class="tab-content showtime__content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="nav-mon" role="tabpanel" aria-labelledby="nav-mon-tab">
+                    <div class="row py-5 showtime__item">
+                        <div class="col-3 col-md-2 showtime__poster">
+                            <img class="img-fluid" src="./img/movie-7.jpg" alt="movie-7">
+                        </div>
+                        <div class="col-9 col-md-10 showtime__info">
+                            <h2>Action, adventure, fantasy</h2>
+                            <h1>It's over</h1>
+                            <p class="d-none d-md-block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum obcaecati id
+                                ullam quaerat
+                                ab natus debitis voluptates alias beatae ipsa!</p>
+                            <h2 class="my-5"><a href="#">Full synopsis</a></h2>
+                            <div class="d-flex justify-content-between">
+                                <div class="showtime__left">
+                                    <i class="fa fa-clock"></i>
+                                    <span class="mx-2">Viewing times</span>
+                                    <button class="disabled" disabled>12:00</button>
+                                    <button>14:00</button>
+                                    <button>16:00</button>
+                                    <button>19:00</button>
+                                </div>
+                                <div class="showtime__right">
+                                    <p>120 mins
+                                        <span>PG</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-5  showtime__item">
+                        <div class="col-3 col-md-2 showtime__poster">
+                            <img class="img-fluid" src="./img/movie-8.jpg" alt="movie-8">
+                        </div>
+                        <div class="col-9 col-md-10 showtime__info">
+                            <h2>Drama</h2>
+                            <h1>Fences</h1>
+                            <p class="d-none d-md-block my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Earum obcaecati id
+                                ullam quaerat
+                                ab natus debitis voluptates alias beatae ipsa!</p>
+                            <h2 class="my-5"><a href="#">Full synopsis</a></h2>
+                            <div class="d-flex justify-content-between">
+                                <div class="showtime__left">
+                                    <i class="fa fa-clock"></i>
+                                    <span class="mx-2">Viewing times</span>
+                                    <button class="disabled" disabled>12:00</button>
+                                    <button>14:15</button>
+                                    <button>17:30</button>
+                                    <button>22:00</button>
+                                </div>
+                                <div class="showtime__right">
+                                    <p>110 mins
+                                        <span>PG</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="nav-tue" role="tabpanel" aria-labelledby="nav-tue-tab">
+                </div>
+                <div class="tab-pane fade" id="nav-wed" role="tabpanel" aria-labelledby="nav-wed-tab"></div>
+                <div class="tab-pane fade" id="nav-thu" role="tabpanel" aria-labelledby="nav-thu-tab"></div>
+                <div class="tab-pane fade" id="nav-fri" role="tabpanel" aria-labelledby="nav-fri-tab"></div>
+                <div class="tab-pane fade" id="nav-sat" role="tabpanel" aria-labelledby="nav-sat-tab"></div>
+                <div class="tab-pane fade" id="nav-sun" role="tabpanel" aria-labelledby="nav-sun-tab"></div>
+            </div>
+        </div>
+    </section>
     <!-- COMING -->
+    <section class="coming animate__animated animate__fadeIn wow">
+        <div class="coming__container container">
+            <h1 class="title coming__title">Coming soon</h1>
+        </div>
+
+        <div class="coming__content">
+            <div class="coming__item coming__item--1 d-flex align-items-center">
+                <div class="container">
+                    <div class="row coming__detail mt-xl-5">
+                        <div class="col-12 col-md-6 ps-0 coming__info text-start">
+                            <h2>Drama, Thriller</h2>
+                            <h1 class="my-4">Deepwater Horizon</h1>
+                            <p>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <span class="coming__date">
+                                    <i class="mx-3 fa fa-calendar"></i>
+                                    30 September, 2017
+                                </span>
+                            </p>
+                            <p class="my-4">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                                consuetudium
+                                lectorum.
+                                Mirum
+                                est notare quam littera
+                                gothica, quam nunc putamus parum.</p>
+                            <h2><a href="#">More info</a></h2>
+                            <!-- Button trigger modal -->
+                        </div>
+                        <div class="col-12 col-md-6 d-none d-md-block pe-0 d-flex align-items-center coming__vid">
+                            <img class="img-fluid" src="./img/slide-1-video.png" alt="slide-1-video">
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coming__item coming__item--2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row coming__detail mt-xl-5">
+                        <div class="col-12 col-md-6 coming__info text-start">
+                            <h2>Action, adventure, sci-fi</h2>
+                            <h1 class="my-4">X-Men: Days of Future Past</h1>
+                            <p>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <span class="coming__date">
+                                    <i class="mx-3 fa fa-calendar"></i>
+                                    30 September, 2017
+                                </span>
+                            </p>
+                            <p class="my-4">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                lectorum.
+                                Mirum
+                                est notare quam littera
+                                gothica, quam nunc putamus parum.</p>
+                            <h2><a href="#">More info</a></h2>
+                            <!-- Button trigger modal -->
+                        </div>
+                        <div class="col-12 col-md-6  d-none d-md-block d-flex align-items-center coming__vid">
+                            <img class="img-fluid" src="./img/slide-2-video.png" alt="slide-2-video">
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coming__item coming__item--3 d-flex align-items-center">
+                <div class="container">
+                    <div class="row coming__detail mt-xl-5">
+                        <div class="col-12 col-md-6 coming__info text-start">
+                            <h2>Action, adventure, sci-fi</h2>
+                            <h1 class="my-4">Transformers: Age of Extinction</h1>
+                            <p>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <span class="coming__date">
+                                    <i class="mx-3 fa fa-calendar"></i>
+                                    30 September, 2017
+                                </span>
+                            </p>
+                            <p class="my-4">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                lectorum.
+                                Mirum
+                                est notare quam littera
+                                gothica, quam nunc putamus parum.</p>
+                            <h2><a href="#">More info</a></h2>
+                            <!-- Button trigger modal -->
+                        </div>
+                        <div class="col-12 col-md-6 d-none d-md-block d-flex align-items-center coming__vid">
+                            <img class="img-fluid" src="./img/slide-3-video.png" alt="slide-3-video">
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coming__item coming__item--1 d-flex align-items-center">
+                <div class="container">
+                    <div class="row coming__detail mt-xl-5">
+                        <div class="col-12 col-md-6 ps-0 coming__info text-start">
+                            <h2>Drama, Thriller</h2>
+                            <h1 class="my-4">Deepwater Horizon</h1>
+                            <p>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <span class="coming__date">
+                                    <i class="mx-3 fa fa-calendar"></i>
+                                    30 September, 2017
+                                </span>
+                            </p>
+                            <p class="my-4">Claritas est etiam processus dynamicus, qui sequitur mutationem
+                                consuetudium
+                                lectorum.
+                                Mirum
+                                est notare quam littera
+                                gothica, quam nunc putamus parum.</p>
+                            <h2><a href="#">More info</a></h2>
+                            <!-- Button trigger modal -->
+                        </div>
+                        <div class="col-12 col-md-6 d-none d-md-block pe-0 d-flex align-items-center coming__vid">
+                            <img class="img-fluid" src="./img/slide-1-video.png" alt="slide-1-video">
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coming__item coming__item--2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row coming__detail mt-xl-5">
+                        <div class="col-12 col-md-6 coming__info text-start">
+                            <h2>Action, adventure, sci-fi</h2>
+                            <h1 class="my-4">X-Men: Days of Future Past</h1>
+                            <p>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <i class="fa fa-star icon-turnOn"></i>
+                                <span class="coming__date">
+                                    <i class="mx-3 fa fa-calendar"></i>
+                                    30 September, 2017
+                                </span>
+                            </p>
+                            <p class="my-4">Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium
+                                lectorum.
+                                Mirum
+                                est notare quam littera
+                                gothica, quam nunc putamus parum.</p>
+                            <h2><a href="#">More info</a></h2>
+                            <!-- Button trigger modal -->
+                        </div>
+                        <div class="col-12 col-md-6  d-none d-md-block d-flex align-items-center coming__vid">
+                            <img class="img-fluid" src="./img/slide-2-video.png" alt="slide-2-video">
+                            <i class="fa fa-play d-block rounded-circle" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="coming__list">
+            <div class="container">
+                <div class="coming__list__content">
+                    <div class="coming__list__item">
+                        <div class="coming__list__poster">
+                            <img class="img-fluid" src="./img/movie-9.jpg" alt="movie-9">
+                        </div>
+                        <h2 class="my-3">Deepwater Horizon</h2>
+                        <p>07 September,2017</p>
+                    </div>
+                    <div class="coming__list__item">
+                        <div class="coming__list__poster">
+                            <img class="img-fluid" src="./img/movie-11.jpg" alt="movie-11">
+                        </div>
+                        <h2 class="my-3">To Fast</h2>
+                        <p>07 September,2017</p>
+                    </div>
+                    <div class="coming__list__item">
+                        <div class="coming__list__poster">
+                            <img class="img-fluid" src="./img/movie-12.jpg" alt="movie-12">
+                        </div>
+                        <h2 class="my-3">The Hangover: Part III</h2>
+                        <p>07 September,2017</p>
+                    </div>
+                    <div class="coming__list__item">
+                        <div class="coming__list__poster">
+                            <img class="img-fluid" src="./img/movie-13.jpg" alt="movie-13">
+                        </div>
+                        <h2 class="my-3">Transformers: Age of Extinction</h2>
+                        <p>07 September,2017</p>
+                    </div>
+                    <div class="coming__list__item">
+                        <div class="coming__list__poster">
+                            <img class="img-fluid" src="./img/movie-14.jpg" alt="movie-14">
+                        </div>
+                        <h2 class="my-3">End of an Empire</h2>
+                        <p>07 September,2017</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- CONTACT -->
+    <section class="contact animate__animated animate__fadeIn wow">
+        <div class="container text-center">
+            <h2>Need help? Contact our support team on</h2>
+            <h1 class="mt-4">0330 123 4567</h1>
+        </div>
+    </section>
     <!-- FOOTER -->
+    <footer class="footer animate__animated animate__fadeIn wow">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-3">
+                    <h1 class="mb-5">Get in touch</h1>
+                    <ul>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Give us feedback</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h1 class="mb-5">About Movie star</h1>
+                    <ul>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Find us</a></li>
+                        <li><a href="#">Schedule</a></li>
+                        <li><a href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h1 class="mb-5">Legal stuff</h1>
+                    <ul>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Cookie policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h1 class="mb-5">Connect with us</h1>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>
+                                Facebook</a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/" target="_blank"><i class="fab fa-google-plus"></i> Google
+                                +</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright mt-5 py-4">
+                <p>
+                    2017 © Movie Star /
+                    <a href="https://www.klevermedia.co.uk">Web design by Klever media</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- JQUERY -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <!-- JS BOOTSTRAP -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
         integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp"
@@ -142,6 +719,73 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
+    <!-- JS SLICK -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.new__content').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        autoplay: true,
+                        autoplayTimeout: 3,
+                    }
+                }]
+        });
+        $('.coming__content').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            asNavFor: '.coming__list__content',
+        });
+        $('.coming__list__content').slick({
+            infinite: true,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            arrows: true,
+            asNavFor: '.coming__content',
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        autoplay: true,
+                        autoplayTimeout: 3,
+                    }
+                }]
+        });
+    </script>
+    <!-- JS WOW -->
+    <script src="./js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+    <!-- JS MENU -->
+    <script type="text/javascript" src="./js/menu.js"></script>
 </body>
 
 </html>

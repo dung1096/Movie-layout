@@ -1,18 +1,18 @@
-/* MENU */
+// NAVBAR
 .menu {
-  background-color: c("dark");
-  &__detail p {
-    @include text(fs("body1"), tc("textPrimary"), fw("fwMedium"), 0.01);
-  }
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: all 0.4s;
-}
-.menu--pinned {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 12;
-  opacity: 1;
-  transform: translateY(0%);
+    position        : relative;
+    background-color: bg("black");
+    transform       : translateY(-100%);
+    transition      : all 0.5s;
+    opacity         : 0;
+    visibility      : hidden;
+
+    &--pinned {
+        position  : -webkit-sticky;
+        position  : sticky;
+        top       : 0;
+        transform : translateY(0);
+        opacity   : 1;
+        visibility: inherit;
+    }
 }

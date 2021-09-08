@@ -1,0 +1,15 @@
+.title {
+    @include text(fs("h5"), tc("textSecondary"), fw("fwExtraLight"), 0.1);
+    text-transform: uppercase;
+    position      : relative;
+    margin        : 2rem 0;
+    padding       : 2rem 0;
+    border-bottom : 1px solid bc("bdDark");
+
+    &::after {
+        content: "";
+        @include absolute(auto, auto, -1px, 0);
+        @include size(15rem, 2px);
+        background-image: bg("linear");
+    }
+}

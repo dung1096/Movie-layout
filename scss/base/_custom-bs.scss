@@ -1,5 +1,46 @@
+.container {
+  padding-top   : 5rem;
+  padding-bottom: 5rem;
+}
+
+.row {
+  margin: 0;
+}
+
+// navbar
+.navbar-toggler {
+  border: none;
+
+  i {
+    @include icon(5rem, 5rem, 5rem, transparent, transparent, fs("body"), tc("textWhite"));
+  }
+
+  &:focus {
+    outline   : none;
+    box-shadow: 0 0 0 0;
+  }
+}
+
+.navbar-collapse {
+  &--config {
+    background: transparent;
+
+    @include responsive(rp("lg")) {
+      background: bg("dark");
+    }
+
+    @include responsive(rp("sm")) {
+      background: transparent;
+    }
+  }
+}
+
 .navbar-nav {
   border-bottom: 1px solid bc("bdLight");
+
+  @include responsive(rp("lg")) {
+    border-bottom: none;
+  }
 }
 
 .nav-item {
@@ -7,7 +48,7 @@
   padding : 1rem;
 
   a:nth-child(2) {
-    @include positionAbsolute(auto, auto, -3.5rem, 0);
+    @include absolute(auto, auto, -3.5rem, 0);
     white-space     : nowrap;
     background-image: bg("linear");
     width           : 15rem;
@@ -15,11 +56,16 @@
     transform       : scale(1.2);
     transition      : all 0.4s;
     visibility      : hidden;
+    text-align      : center;
+
+    @include responsive(rp("lg")) {
+      @include absolute(auto, 0, 0, auto);
+    }
   }
 
   &::after {
     content: "";
-    @include positionAbsolute(auto, auto, -1px, 0);
+    @include absolute(auto, auto, -1px, 0);
     @include size(0, 2px);
     background-image: bg("linear");
     transition      : all 0.4s;
@@ -38,21 +84,32 @@
     }
   }
 
+  &--config.active .nav-link--config {
+    color: tc("textSecondary") !important;
 
+  }
 }
 
 .nav-link {
   @include text(fs("subtitle"), tc("textWhite") !important, fw("fwRegular"), 0.2);
   text-transform: uppercase;
+  white-space   : nowrap;
+
+  &--config {
+    color : tc("textDark") !important;
+    border: none !important;
+    cursor: pointer;
+  }
 }
 
+// carousel
 .carousel-caption {
-  @include positionAbsolute(50%, auto, auto, 10%);
+  @include absolute(50%, auto, auto, 10%);
   transform: translate(0, -50%);
 }
 
 .carousel-indicators {
-  @include positionAbsolute(auto, auto, 20%, -5%);
+  @include absolute(auto, auto, 20%, -5%);
 
   button {
     @include size(1rem !important, 1rem !important);
@@ -62,6 +119,23 @@
 
     &.active {
       background-color: bc("bdWhite") !important;
+    }
+  }
+}
+
+// modal
+.modal-content {
+  border    : transparent;
+  background: transparent;
+}
+
+.modal-header {
+  border: transparent;
+
+  .btn-close {
+    &:focus {
+      outline   : none;
+      box-shadow: 0 0 0 0 transparent;
     }
   }
 }

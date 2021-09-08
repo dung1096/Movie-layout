@@ -2,29 +2,37 @@
 // colors background
 $bgColor: ("primary": #ffffff,
   "secondary": #ec7532,
-  "lightOrange": #fbbd61,
+  "orange": #fbbd61,
   "linear":linear-gradient(to right, #fbbd61, #ec7532),
   "linearOverlay":linear-gradient(to top, #000000, transparent),
+  "light":#d8d8d8,
+  "dark":#343a40,
+  "black":#000000,
 );
 
 // colors text
-$textColor: ("textPrimary": #ffffff,
+$textColor: ("textPrimary": #717171,
   "textSecondary": #ec7532,
+  "textOrange": #fbbd61,
   "textWhite":#ffffff,
+  "textLight":#d8d8d8,
+  "textDark":#4a4a4a,
 );
 // colors border
 $borderColor: ("bdLight": rgba(255, 255, 255, 0.3),
+  "bdDark": rgba(0, 0, 0, 0.3),
   "bdWhite": #ffffff,
+  "bdOrange": #fbbd61,
 );
 // font size
 $fontSize: ("body2": 1.3rem,
   "body": 1.5rem,
   "subtitle": 1.6rem,
-  // "h6": 1.6rem,
-  // "h5": 1.8rem,
-  // "h4": 2.5rem,
-  // "h3": 3rem,
-  // "h2": 4rem,
+  "h6": 1.8rem,
+  "h5": 2rem,
+  "h4": 2.5rem,
+  "h3": 3rem,
+  "h2": 4rem,
   "h1": 5rem,
 );
 

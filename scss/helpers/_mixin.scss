@@ -14,23 +14,30 @@
   border-radius: $br;
 }
 
-// font icon
-@mixin fontIcon($fs, $c) {
-  font-size: $fs;
-  color    : $c;
-}
-
-// size icon
-@mixin sizeIcon($w, $h, $lh) {
+// icon
+@mixin icon($w, $h, $lh, $bg, $bd, $fs, $c) {
   width      : $w;
   height     : $h;
   line-height: $lh;
+  background : $bg;
+  border     : 1px solid $bd;
+  font-size  : $fs;
+  color      : $c;
   text-align : center;
 }
 
 //position absolute
-@mixin positionAbsolute($t, $r, $b, $l) {
+@mixin absolute($t, $r, $b, $l) {
   position: absolute;
+  top     : $t;
+  right   : $r;
+  bottom  : $b;
+  left    : $l;
+}
+
+//position fixed
+@mixin fixed($t, $r, $b, $l) {
+  position: fixed;
   top     : $t;
   right   : $r;
   bottom  : $b;
@@ -41,6 +48,23 @@
 @mixin size($w, $h) {
   width : $w;
   height: $h;
+}
+
+//display flex
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+
+  @if ($justify) {
+    justify-content: $justify;
+  }
+
+  @if ($align) {
+    align-items: $align;
+  }
+
+  @if ($direction) {
+    flex-direction: $direction;
+  }
 }
 
 //responsive
